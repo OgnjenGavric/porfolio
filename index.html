@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon/favicon-16x16.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--=============== CSS ===============-->
+    <!-- minify -->
+    <link
+      href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Ognjen - portfolio website</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+
+    <header class="profile container section">
+      <!-- Theme button -->
+      <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+      <div class="profile__container grid">
+        <!-- Balloon 'is-dark'  -->
+        <section class="nes-container is-dark">
+          <section class="message-list">
+            <section class="message -left">
+              <!-- Balloon -->
+              <div class="nes-balloon from-left is-dark">
+                <p>Hello... I am Olja.</p>
+              </div>
+              <i class="nes-bcrikko"></i>
+            </section>
+
+            <section class="message -right">
+              <!-- Balloon -->
+              <div class="nes-balloon from-left is-dark">
+                <p>
+                  I'd like to introduce myself as a Web Developer and Designer.
+                </p>
+              </div>
+              <i class="nes-bcrikko"></i>
+            </section>
+          </section>
+        </section>
+        <div class="profile__data">
+          <div class="nes-balloon from-left nes-pointer">
+            <h1 class="profile__name">Ognjen Olja Gavric</h1>
+          </div>
+          <div class="nes-balloon from-left nes-pointer">
+            <h3 class="profile__profession">Front-End Developer</h3>
+          </div>
+          <div class="nes-balloon balloon__profile-img">
+            <img
+              src="./assets/img/Olja-Avvatar.jpg"
+              class="profile__img"
+              alt="Ognjen Gavrić"
+            />
+          </div>
+
+          <ul class="profile__social">
+            <a
+              href="https://www.instagram.com/gavrico/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile__social-link"
+            >
+              <i class="nes-icon instagram is-medium"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ognjen-gavric-3a93886b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile__social-link"
+            >
+              <i class="nes-icon linkedin is-medium"></i>
+            </a>
+            <a
+              href="https://github.com/OgnjenGavric/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="profile__social-link"
+            >
+              <i class="nes-icon github is-medium"></i>
+            </a>
+          </ul>
+        </div>
+
+        <div class="profile__info grid">
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">7</h3>
+            <p class="profile__info-description">
+              Years of <br />
+              work
+            </p>
+          </div>
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">+15</h3>
+            <p class="profile__info-description">
+              Completed <br />
+              projects
+            </p>
+          </div>
+          <div class="profile__info-group">
+            <h3 class="profile__info-number">96</h3>
+            <p class="profile__info-description">
+              Satisfied <br />
+              customers
+            </p>
+          </div>
+        </div>
+
+        <div class="profile__buttons">
+          <div class="profile__buttons-small">
+            <!-- Insert a real number plus country code -->
+            <a
+              href="https://api.whatsapp.com/send?phone=38765365304&text=Hello, more information!"
+              target="_blank"
+              rel="noopener noreferrer"
+              type="button"
+              class="nes-btn"
+            >
+              <i class="nes-icon whatsapp is-large"></i>
+            </a>
+            <a
+              href="sms:+38765365304?&body=Hello%2C%20I%20would%20like%20to%20consult%20with%20you%20about%20programming%20a%20website..."
+              target="_blank"
+              rel="noopener noreferrer"
+              type="button"
+              class="nes-btn"
+            >
+              <i class="nes-phone"></i>
+            </a>
+            <a
+              href="mailto:ognjen.gavric@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              type="button"
+              class="nes-btn"
+            >
+              <i class="nes-icon gmail is-large"></i>
+            </a>
+          </div>
+
+          <div>ognjen.gavric@gmail.com</div>
+          <br />
+          <!-- My CV -->
+          <a
+            download=""
+            href="./assets/pdf/CV-Ognjen-Gavric-Eng.pdf"
+            class="nes-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            type="button"
+          >
+            Download CV - Eng<i class="ri-download-line"></i>
+          </a>
+          <br />
+          <!-- Моја биографија -->
+          <a
+            download=""
+            href="./assets/pdf/Огњен-Гаврић-биографија.pdf"
+            class="nes-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            type="button"
+          >
+            Преузми моју биографију <i class="ri-download-line"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <section class="filters container">
+        <!--=============== FILTERS TABS ===============-->
+        <ul class="filters__content">
+          <button
+            class="filters__button filter-tab-active"
+            data-target="#projects"
+          >
+            My Projects <i class="nes-mario"></i>
+          </button>
+
+          <button class="filters__button" data-target="#skills">
+            My Education & Skills <i class="nes-octocat animate"></i>
+          </button>
+        </ul>
+
+        <div class="filters__sections">
+          <!--=============== PROJECTS ===============-->
+          <div
+            class="projects__content grid filters__active"
+            data-content
+            id="projects"
+          >
+            <article class="projects__card message-list">
+              <img
+                src="./assets/img/medico22-Lucija.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web & Graphic</span>
+                  <h3 class="projects__title">Medico22</h3>
+                  <a
+                    href="http://www.medico22.at/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/starprofiles.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">STAR Pofiles</h3>
+                  <a
+                    href="https://starprofiles.eu/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/freejack-tivat.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">SmartHome</h3>
+                  <a
+                    href="https://freejack.starprofiles.eu/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/Bokeski-Forum-Sun.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web & Graphic</span>
+                  <h3 class="projects__title">„Bokeški Forum”</h3>
+                  <a
+                    href="https://bokeskiforum.info/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/hanex-gmbh.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">HANEX GMBH</h3>
+                  <a
+                    href="https://hanex-gmbh.de/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/orkbl.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">ORK "BL"</h3>
+                  <a
+                    href="http://www.skolarukometabl.ba/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/uizznr.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web & Graphic</span>
+                  <h3 class="projects__title">UIZZNR BL</h3>
+                  <a
+                    href="https://uizznr.com/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/dr-lazarevic.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">
+                    ZU „Prof. dr Aleksandar Lazarević”
+                  </h3>
+                  <a
+                    href="https://dr-lazarevic.com/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/freejack.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Freejack Connected Lifestyle</h3>
+                  <a
+                    href="https://www.freejack.me/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/brossco.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">BrossCo d.o.o.</h3>
+                  <a
+                    href="https://brossco.net/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/teodul.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">"Teodul" Medicinal herbs</h3>
+                  <a
+                    href="https://ljekovitobiljeteodul.com/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/tondo-tivat.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Tondo Tivat - apartments</h3>
+                  <a
+                    href="https://tondotivat.starprofiles.eu/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/eat-n-split.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Eat n' Split App</h3>
+                  <a
+                    href="https://eat-n-split-olja.netlify.app/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/travel-app.png"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Travel App - notes</h3>
+                  <a
+                    href="https://putna-lista.netlify.app/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/the-wild-oasis.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">
+                    MNE The Wild Oasis - dashboard
+                  </h3>
+                  <a
+                    href="https://mne-the-wild-oasis.netlify.app/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/Chatbot-Olja-Zap.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Chatbot Olja</h3>
+                  <a
+                    href="https://new-interface-59b14b.zapier.app/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="projects__card">
+              <img
+                src="./assets/img/todo-lists-olja.jpg"
+                alt="projects image"
+                class="projects__img"
+              />
+
+              <div class="projects__modal">
+                <div>
+                  <span class="projects__subtitle">Web</span>
+                  <h3 class="projects__title">Todo List Olja</h3>
+                  <a
+                    href="https://olja-toto-list.netlify.app/"
+                    class="nes-badge"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="is-primary"
+                      ><i class="ri-link"></i> Visit</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!--=============== SKILLS ===============-->
+          <div class="skills__content grid" data-content id="skills">
+            <div class="skills__area">
+              <h3 class="skills__title">Education</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="nes-icon trophy is-medium"></i>
+
+                    <div>
+                      <h2 class="skills__name">BIT FRONTEND BOOTCAMP</h2>
+                      <h3 class="skills__level">
+                        BIT Institute of Technology Belgrade
+                      </h3>
+
+                      <span class="skills__level">JavaScript & React</span>
+                      <br />
+                      <span class="skills__level"
+                        >27.09.2022 - 08.04.2023.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Certifications</h3>
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="nes-icon trophy is-medium"></i>
+
+                    <div>
+                      <h2 class="skills__name">
+                        Microsoft Technology Associate
+                      </h2>
+                      <h3 class="skills__level">
+                        Software Development Fundamentals
+                      </h3>
+                      <span class="skills__level">November 9, 2016</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Frontend Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="nes-icon star"></i>
+
+                    <div>
+                      <h3 class="skills__name">HTML</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="nes-icon star"></i>
+
+                    <div>
+                      <h3 class="skills__name">CSS</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="nes-icon star"></i>
+
+                    <div>
+                      <h3 class="skills__name">JavaScript</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="nes-icon star"></i>
+
+                    <div>
+                      <h3 class="skills__name">React</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="nes-icon star"></i>
+
+                    <div>
+                      <h3 class="skills__name">Bootstrap</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="nes-icon star"></i>
+
+                    <div>
+                      <h3 class="skills__name">Git</h3>
+                      <span class="skills__level">Advanced</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills__area">
+              <h3 class="skills__title">Backend Developer</h3>
+
+              <div class="skills__box">
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="nes-icon star is-half"></i>
+
+                    <div>
+                      <h3 class="skills__name">PHP</h3>
+                      <span class="skills__level">Basic</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="nes-icon star is-half"></i>
+
+                    <div>
+                      <h3 class="skills__name">MySQL</h3>
+                      <span class="skills__level">Basic</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="nes-icon star is-half"></i>
+
+                    <div>
+                      <h3 class="skills__name">Firebase</h3>
+                      <span class="skills__level">Basic</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__group">
+                  <div class="skills__data">
+                    <i class="nes-icon star is-half"></i>
+
+                    <div>
+                      <h3 class="skills__name">Python</h3>
+                      <span class="skills__level">Basic</span>
+                    </div>
+                  </div>
+
+                  <div class="skills__data">
+                    <i class="nes-icon star is-half"></i>
+
+                    <div>
+                      <h3 class="skills__name">Node Js</h3>
+                      <span class="skills__level">Intermediate</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer container">
+      <span class="footer__copy">
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        &#169; Ognjen Olja Gavric. All rigths reserved.
+      </span>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+    <!--=============== CHAT BOT ===============-->
+  </body>
+</html>
