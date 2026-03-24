@@ -16,7 +16,8 @@
   --sat: 90%;
   --lig: 61%;
   --first-color: hsl(var(--hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
+  --first-color-alt: hsl(var(--hue), var(--sat), 57%);
+  /* -4% */
   --title-color: hsl(var(--hue), 12%, 15%);
   --text-color: hsl(var(--hue), 12%, 45%);
   --text-color-light: hsl(var(--hue), 8%, 75%);
@@ -60,7 +61,8 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: 0.3s; /* For animation dark mode */
+  transition: 0.3s;
+  /* For animation dark mode */
 }
 
 h1,
@@ -85,11 +87,8 @@ img {
 
 /*=============== CHANGE THEME ===============*/
 .change-theme {
-  position: absolute;
-  top: 1.5rem;
-  right: 0;
+  position: relative;
   font-size: 1.25rem;
-  color: var(--title-color);
   cursor: pointer;
   transition: 0.3s;
 }
@@ -154,7 +153,7 @@ body.dark-theme {
 /*=============== PROFILE ===============*/
 .profile {
   position: relative;
-  padding-top: 3.5rem;
+  padding-top: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,6 +161,31 @@ body.dark-theme {
 
 .profile__container {
   row-gap: 2rem;
+}
+
+.profile__container .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.profile__container .inner .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.profile__container .inner .logo img {
+  width: 25px;
+}
+
+.legacy-site-link {
+  color: var(--title-color);
+}
+
+.legacy-site-link span {
+  color: var(--text-color);
 }
 
 .profile__data {
@@ -193,11 +217,9 @@ body.dark-theme {
 .profile__perfil {
   width: 100px;
   height: 100px;
-  background: linear-gradient(
-    180deg,
-    hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
-    hsla(var(--hue), var(--sat), var(--lig), 0.2) 100%
-  );
+  background: linear-gradient(180deg,
+      hsla(var(--hue), var(--sat), var(--lig), 1) 0%,
+      hsla(var(--hue), var(--sat), var(--lig), 0.2) 100%);
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -351,6 +373,7 @@ body.dark-theme {
   border: none;
   box-shadow: inset #094c66 4px 4px 0px;
 }
+
 .filters__button:active,
 .filters__button:focus {
   border: none;
@@ -377,11 +400,9 @@ body.dark-theme {
   height: 100%;
   bottom: -100%;
   left: 0;
-  background: linear-gradient(
-    180deg,
-    hsla(var(--hue), 24%, 40%, 0.3) 0%,
-    hsla(var(--hue), 24%, 4%, 1) 95%
-  );
+  background: linear-gradient(180deg,
+      hsla(var(--hue), 24%, 40%, 0.3) 0%,
+      hsla(var(--hue), 24%, 4%, 1) 95%);
   display: grid;
   align-items: flex-end;
   padding: 1.5rem 1.25rem;
@@ -501,17 +522,21 @@ body.dark-theme {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
+
   .profile__info {
     grid-template-columns: minmax(100px, 1fr);
     gap: 1rem;
   }
+
   .skills__title {
     font-size: var(--normal-font-size);
   }
+
   .skills__name {
     font-size: var(--small-font-size);
   }
 }
+
 @media screen and (max-width: 575px) {
   .container {
     margin-left: 1rem;
@@ -521,6 +546,7 @@ body.dark-theme {
   .profile__info {
     gap: 1rem;
   }
+
   .profile__buttons {
     flex-direction: column;
     row-gap: 1rem;
@@ -545,6 +571,7 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 776px) {
+
   .projects__content,
   .skills__content {
     grid-template-columns: repeat(2, 332px);
@@ -563,35 +590,37 @@ body.dark-theme {
     margin-right: auto;
   }
 
-  .change-theme {
-    top: 2.5rem;
-    right: 2.5rem;
-  }
-
   .profile {
     padding-top: 4rem;
   }
+
   .profile__border {
     width: 135px;
     height: 135px;
     margin-bottom: 1rem;
   }
+
   .profile__perfil {
     width: 120px;
     height: 120px;
   }
+
   .profile__perfil img {
     width: 100%;
   }
+
   .profile__profession {
     margin-bottom: 1.5rem;
   }
+
   .profile__info {
     column-gap: 3rem;
   }
+
   .profile__info-description {
     font-size: var(--small-font-size);
   }
+
   .profile__buttons {
     column-gap: 2rem;
   }
@@ -599,6 +628,7 @@ body.dark-theme {
   .projects__content {
     gap: 2rem 3rem;
   }
+
   .projects__modal {
     padding: 1.5rem;
   }
@@ -625,6 +655,7 @@ body.dark-theme {
   height: 520px;
   background-color: white;
 }
+
 /*
   Styling for div elements wrapping both sliders
 */
@@ -635,10 +666,14 @@ body.dark-theme {
   margin-bottom: 2.2em;
   width: 100%;
   /* background:
-    repeating-linear-gradient(90deg, #c8c8c8, #c8c8c8 0.125em /* lines */ /*, transparent 0.125em, transparent 1.25em /* space between 
-      */ /*) 80% no-repeat;
-  /*background-size: 100% /* = 10*1.25em + .125em */ /*20%;*/
+    repeating-linear-gradient(90deg, #c8c8c8, #c8c8c8 0.125em /* lines */
+  /*, transparent 0.125em, transparent 1.25em /* space between 
+      */
+  /*) 80% no-repeat;
+  /*background-size: 100% /* = 10*1.25em + .125em */
+  /*20%;*/
 }
+
 /*
   Styling for both sliders
 */
@@ -647,31 +682,41 @@ body.dark-theme {
   width: 100%;
   height: 1px;
   border-radius: 10px;
-  background: var(--slider-color); /* Light grey background. */
-  outline: none; /* Remove outline. */
-  /*opacity: 0.7; */ /* Set transparency (for mouse-over effects on hover) */
-  /*-webkit-transition: .2s;*/ /* 0.2 seconds transition on hover */
+  background: var(--slider-color);
+  /* Light grey background. */
+  outline: none;
+  /* Remove outline. */
+  /*opacity: 0.7; */
+  /* Set transparency (for mouse-over effects on hover) */
+  /*-webkit-transition: .2s;*/
+  /* 0.2 seconds transition on hover */
   /*transition: opacity .2s;*/
 }
 
 /* Mouse-over effects 🖱 računalniška miška */
-/*.weight-slider:hover, .height-slider:hover */ /*{
-  opacity: 1; */ /* Fully shown on mouse-over */ /*
+/*.weight-slider:hover, .height-slider:hover */
+/*{
+  opacity: 1; */
+/* Fully shown on mouse-over */
+/*
 }*/
 
 /* DEFINE STYLING FOR INPUT RANGE SLIDERS & INPUT TYPE NUMBER FOR BROWSER COMPATIBILITY
   https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
 */
 input[type='range'] {
-  -moz-appearance: none; /* Override default CSS styles */
+  -moz-appearance: none;
+  /* Override default CSS styles */
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }
 
 input[type='range']:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
+
 input[type='range']::-ms-track {
   width: 100%;
   cursor: pointer;
@@ -686,8 +731,10 @@ input[type='range']::-webkit-slider-thumb {
   border-radius: 40px;
   background: white;
   cursor: pointer;
-  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */ /* Add cool effects to your sliders! */
+  margin-top: 0px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+  /* Add cool effects to your sliders! */
 }
 
 /* All the same stuff for Firefox */
@@ -714,7 +761,8 @@ input[type='range']::-ms-thumb {
 
 /* INPUT TYPE NUMBER STYLING*/
 input[type='number'] {
-  -moz-appearance: none; /* Override default CSS styles */
+  -moz-appearance: none;
+  /* Override default CSS styles */
   -webkit-appearance: none;
   cursor: pointer;
   /* Real styling part :D */
@@ -730,7 +778,8 @@ input[type='number'] {
 }
 
 input[type='number']:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 /*
@@ -754,9 +803,11 @@ input[type='number']:focus {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .gumb:hover {
   opacity: 0.8;
 }
+
 /*
   Media querie for iPhone 5
 */
