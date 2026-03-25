@@ -304,30 +304,36 @@ themeBtn.addEventListener("click", () => {
    const getCurrentIcon = () => themeBtn.classList.contains("active-sun-icon") ? "sun" : "moon";
    const getCurrentTheme = () => document.body.classList.contains("light-theme") ? "light" : "dark";
 
-   localStorage.setItem("sue-saved-icon", getCurrentIcon());
-   localStorage.setItem("sue-saved-theme", getCurrentTheme());
+   localStorage.setItem("portfolio-icon", getCurrentIcon());
+   localStorage.setItem("portfolio-theme", getCurrentTheme());
 });
 
 // Get saved theme icon and theme on document loaded.
-const savedIcon = localStorage.getItem("sue-saved-icon");
-const savedTheme = localStorage.getItem("sue-saved-theme");
+const savedIcon = localStorage.getItem("portfolio-icon");
+const savedTheme = localStorage.getItem("portfolio-theme");
 
 document.addEventListener("DOMContentLoaded", () => {
    themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
    document.body.classList[savedTheme === "light" ? "add" : "remove"]("light-theme");
-   /* if (savedIcon && savedTheme) {
-      if (savedIcon === "sun") {
-         themeBtn.classList.add("active-sun-icon");
-      } else {
-         themeBtn.classList.remove("active-sun-icon");
-      }
-      if (savedTheme === "light") {
-         document.body.classList.add("light-theme");
-      } else {
-         document.body.classList.remove("light-theme");
-      }
-   } */
 });
+
+/* =====================================================
+   Page Transition
+===================================================== */
+const legacyLink = document.querySelector('.legacy-site-link');
+const overlay = document.querySelector('.page-transition-overlay');
+
+if (legacyLink && overlay) {
+    legacyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = legacyLink.getAttribute('href');
+        overlay.classList.add('active');
+        
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500); // Match CSS transition duration
+    });
+}
 
 /* =====================================================
    ScrollReveal JS animations

@@ -1,4 +1,94 @@
 /* =========================================
+   Print Styles
+========================================= */
+@media print {
+  .sue-header,
+  .bottom-nav-container,
+  .to-top-btn,
+  .home-social,
+  .about-buttons,
+  .resume-tabs,
+  .contact-form-container,
+  .sue-footer,
+  .lets-talk-btn,
+  .lets-talk-icon,
+  .theme-btn,
+  .menu-show-btn,
+  .home-scroll-btn {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .sue-section {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #resume {
+    display: block !important;
+  }
+
+  .resume-tab-content {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-bottom: 2rem;
+  }
+
+  .resume-tab-content.personal-skills {
+    page-break-before: always;
+  }
+
+  .section-title h3 {
+    color: black !important;
+  }
+
+  .item .info h5 {
+    color: #333 !important;
+  }
+}
+
+/* =========================================
+   Interactive Enhancements
+========================================= */
+.resume-items .item {
+  transition: transform 0.3s ease;
+}
+
+.resume-items .item:hover {
+  transform: translateX(10px);
+}
+
+.print-cv-btn i {
+  margin-left: 5px;
+}
+
+/* =========================================
+   Page Transition Overlay
+========================================= */
+.page-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-color);
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.page-transition-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* =========================================
    Google Fonts
 ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Manrope:wght@200..800&display=swap');

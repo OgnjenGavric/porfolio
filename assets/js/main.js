@@ -24,8 +24,8 @@ const darkTheme = 'dark-theme'
 const iconTheme = 'ri-sun-line'
 
 // Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+const selectedTheme = localStorage.getItem('portfolio-theme')
+const selectedIcon = localStorage.getItem('portfolio-icon')
 
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
@@ -44,9 +44,25 @@ themeButton.addEventListener('click', () => {
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
     // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
+    localStorage.setItem('portfolio-theme', getCurrentTheme())
+    localStorage.setItem('portfolio-icon', getCurrentIcon())
 })
+
+/*=============== PAGE TRANSITION ===============*/
+const legacyLink = document.querySelector('.legacy-site-link');
+const overlay = document.querySelector('.page-transition-overlay');
+
+if (legacyLink && overlay) {
+    legacyLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = legacyLink.getAttribute('href');
+        overlay.classList.add('active');
+        
+        setTimeout(() => {
+            window.location.href = href;
+        }, 500); // Match CSS transition duration
+    });
+}
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({

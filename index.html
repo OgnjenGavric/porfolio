@@ -47,6 +47,9 @@
 </head>
 
 <body>
+  <!--========== Page Transition Overlay ==========-->
+  <div class="page-transition-overlay"></div>
+
   <!--=============== HEADER ===============-->
 
   <header class="profile container section">
@@ -712,6 +715,35 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!--=============== CONTACT ME ===============-->
+    <section class="contact container section" id="contact">
+      <div class="nes-container with-title is-centered">
+        <p class="title">Contact Me</p>
+        <form action="https://formsubmit.co/ognjen.gavric@gmail.com" method="POST">
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_subject" value="Nova poruka sa tvog Portfolia (Retro)">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="nes-field">
+            <label for="name_field">Your Name</label>
+            <input type="text" id="name_field" name="name" class="nes-input" placeholder="Ognjen Gavric" required />
+          </div>
+          <div class="nes-field">
+            <label for="email_field">Your Email</label>
+            <input type="email" id="email_field" name="email" class="nes-input" placeholder="your@email.com" required />
+          </div>
+          <div class="nes-field">
+            <label for="textarea_field">Message</label>
+            <textarea id="textarea_field" name="message" class="nes-textarea" placeholder="Type your message here..."
+              required></textarea>
+          </div>
+          <br />
+          <button type="submit" class="nes-btn is-primary">Send Message</button>
+        </form>
       </div>
     </section>
   </main>
