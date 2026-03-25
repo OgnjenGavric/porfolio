@@ -80,3 +80,34 @@ sr.reveal(`.profile__info-group`, {interval: 100, delay: 700})
 sr.reveal(`.profile__buttons`, {delay: 800})
 sr.reveal(`.filters__content`, {delay: 900})
 sr.reveal(`.filters`, {delay: 1000})
+
+/*=============== CONTACT FORM AJAX ===============*/
+const contactForm = document.getElementById('contact-form')
+const successDialog = document.getElementById('success-dialog')
+
+if (contactForm && successDialog) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        
+        const formData = new FormData(contactForm)
+        
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                successDialog.showModal()
+                contactForm.reset()
+            } else {
+                alert('Oops! There was a problem submitting your form')
+            }
+        })
+        .catch(error => {
+            alert('Oops! There was a problem submitting your form')
+        })
+    })
+}

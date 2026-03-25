@@ -722,7 +722,7 @@
     <section class="contact container section" id="contact">
       <div class="nes-container with-title is-centered">
         <p class="title">Contact Me</p>
-        <form action="https://formsubmit.co/ognjen.gavric@gmail.com" method="POST">
+        <form action="https://formsubmit.co/ognjen.gavric@gmail.com" method="POST" id="contact-form">
           <!-- FormSubmit Configuration -->
           <input type="hidden" name="_subject" value="Nova poruka sa Portfolia (Retro)">
           <input type="hidden" name="_template" value="table">
@@ -745,6 +745,17 @@
           <button type="submit" class="nes-btn is-primary">Send Message</button>
         </form>
       </div>
+
+      <!-- Success Dialog -->
+      <dialog class="nes-dialog is-rounded" id="success-dialog">
+        <form method="dialog">
+          <p class="title">Success!</p>
+          <p>Your message sent successfully!</p>
+          <menu class="dialog-menu">
+            <button class="nes-btn is-primary">OK</button>
+          </menu>
+        </form>
+      </dialog>
     </section>
   </main>
 
