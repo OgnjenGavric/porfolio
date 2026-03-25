@@ -722,6 +722,11 @@ body.dark-theme {
 /*
 }*/
 
+.contact {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* DEFINE STYLING FOR INPUT RANGE SLIDERS & INPUT TYPE NUMBER FOR BROWSER COMPATIBILITY
   https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
 */

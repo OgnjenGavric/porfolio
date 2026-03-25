@@ -16,6 +16,19 @@
   <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 
+  <!--=============== PWA ===============-->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4a00e0">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(reg => console.log('Service Worker registered', reg))
+          .catch(err => console.log('Service Worker registration failed', err));
+      });
+    }
+  </script>
+
   <title>Ognjen Gavrić | Front-end Developer Portfolio</title>
 
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
