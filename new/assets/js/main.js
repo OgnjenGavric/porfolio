@@ -204,15 +204,20 @@ window.addEventListener("scroll", () => {
    const scrollY = window.scrollY;
 
    navMenuSections.forEach((navMenuSection) => {
-      let sectionHeight = navMenuSection.offsetHeight;
-      let sectionTop = navMenuSection.offsetTop - 50;
-      let id = navMenuSection.getAttribute("id");
+      const sectionHeight = navMenuSection.offsetHeight;
+      const sectionTop = navMenuSection.offsetTop - 50;
+      const id = navMenuSection.getAttribute("id");
 
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-         document.querySelector(".bottom-nav .menu li a[href*=" + id + "]").classList.add("current");
-      } else {
-         document.querySelector(".bottom-nav .menu li a[href*=" + id + "]").classList.remove("current");
-      };
+      if (id) {
+         const navLink = document.querySelector(".bottom-nav .menu li a[href*=" + id + "]");
+         if (navLink) {
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+               navLink.classList.add("current");
+            } else {
+               navLink.classList.remove("current");
+            };
+         }
+      }
    });
 });
 

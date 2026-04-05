@@ -67,19 +67,18 @@ if (legacyLink && overlay) {
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
+    distance: '30px',
+    duration: 800,
+    delay: 200,
 })
 
-sr.reveal(`.profile__border`)
-sr.reveal(`.profile__name`, {delay: 500})
-sr.reveal(`.profile__profession`, {delay: 600})
-sr.reveal(`.profile__social`, {delay: 700})
-sr.reveal(`.profile__info-group`, {interval: 100, delay: 700})
-sr.reveal(`.profile__buttons`, {delay: 800})
-sr.reveal(`.filters__content`, {delay: 900})
-sr.reveal(`.filters`, {delay: 1000})
+sr.reveal(`.profile__header`, {delay: 300})
+sr.reveal(`.nes-container.is-dark`, {delay: 400})
+sr.reveal(`.profile__data`, {delay: 500})
+sr.reveal(`.profile__info-group`, {interval: 100, delay: 600})
+sr.reveal(`.profile__buttons`, {delay: 700})
+sr.reveal(`.filters__content`, {delay: 800})
+sr.reveal(`.filters`, {delay: 900})
 
 /*=============== CONTACT FORM AJAX ===============*/
 const contactForm = document.getElementById('contact-form')

@@ -1614,6 +1614,18 @@ body {
 }
 
 /* =========================================
+   Standings
+========================================= */
+.standings__grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 50px;
+  row-gap: 55px;
+  width: 100%;
+}
+
+/* =========================================
    Testimonials
 ========================================= */
 .testimonials {
@@ -2432,10 +2444,11 @@ body {
   } */
 }
 
-/* =========================================
-   Media Queries (max-width: 768px)
-========================================= */
 @media screen and (max-width: 768px) {
+  .standings__grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-container .sue-wrapper {
     top: 120px;
   }
