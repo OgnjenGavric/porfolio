@@ -2,6 +2,7 @@
    Print Styles
 ========================================= */
 @media print {
+
   .sue-header,
   .bottom-nav-container,
   .to-top-btn,
@@ -57,10 +58,6 @@
 ========================================= */
 .resume-items .item {
   transition: transform 0.3s ease;
-}
-
-.resume-items .item:hover {
-  transform: translateX(10px);
 }
 
 .print-cv-btn i {
