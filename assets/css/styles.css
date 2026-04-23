@@ -544,6 +544,10 @@ body.dark-theme {
     margin-right: 0.5rem;
   }
 
+  .football-container {
+    padding: 0 !important;
+  }
+
   .profile__info {
     grid-template-columns: minmax(100px, 1fr);
     gap: 1rem;
