@@ -1835,32 +1835,44 @@
                 Friday.
               </p>
               <form action="https://formsubmit.co/ognjen.gavric@gmail.com" method="POST" class="sue-contact-form">
+
+                <!-- Honeypot (anti-spam trap) -->
+                <input type="text" name="_honey" style="display:none">
+
                 <!-- FormSubmit Configuration -->
                 <input type="hidden" name="_subject" value="Nova poruka sa tvog Portfolia (Modern)">
                 <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_next" value="https://ognjen.starprofiles.eu/thank-you.html">
 
                 <div class="input-group">
                   <input type="text" name="full-name" placeholder="Name *" required />
                 </div>
+
                 <div class="input-group">
-                  <input type="text" name="email" placeholder="Email *" required />
+                  <!-- FIX: email mora biti type="email" -->
+                  <input type="email" name="email" placeholder="Email *" required />
                 </div>
+
                 <div class="input-group">
                   <input type="text" name="subject" placeholder="Your Subject *" required />
                 </div>
+
                 <div class="input-group">
-                  <textarea name="message" placeholder="Your Message *" id="" required></textarea>
+                  <textarea name="message" placeholder="Your Message *" required></textarea>
                 </div>
+
                 <div class="input-group send-message">
                   <button type="submit" name="submit" class="sue-main-btn fill-btn submit-btn">
                     Send Message
                   </button>
+
                   <div class="contact-form-alert">
                     <span>Your message sent successfully!</span>
                     <i class="ri-checkbox-circle-fill"></i>
                   </div>
                 </div>
+
               </form>
             </div>
           </div>

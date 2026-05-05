@@ -850,3 +850,41 @@ input[type='number']:focus {
     font-size: 1.5em;
   }
 }
+
+/*=============== DIALOG ===============*/
+.nes-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  width: calc(100% - 2rem);
+  max-width: 500px;
+  z-index: 10001; /* Ensure it stays above everything */
+  padding: 1.5rem;
+}
+
+.nes-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dialog-menu {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.nes-dialog .title {
+  margin-bottom: 1rem;
+}
+
+/* Dark theme for dialog */
+.dark-theme .nes-dialog {
+  background-color: #212529;
+  color: #fff;
+}
+
+.dark-theme .nes-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}

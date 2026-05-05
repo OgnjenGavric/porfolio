@@ -867,24 +867,33 @@
       <div class="nes-container with-title is-centered">
         <p class="title">Kontaktirajte me</p>
         <form action="https://formsubmit.co/ognjen.gavric@gmail.com" method="POST" id="contact-form">
+
           <!-- FormSubmit Configuration -->
           <input type="hidden" name="_subject" value="Nova poruka sa Portfolia (Retro)">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="https://ognjen.starprofiles.eu/thank-you.html">
+
+          <!-- Honeypot -->
+          <input type="text" name="_honey" style="display:none">
 
           <div class="nes-field">
             <label for="name_field">Vaše ime</label>
-            <input type="text" id="name_field" name="name" class="nes-input" placeholder="Vaše ime" required />
+            <input type="text" id="name_field" name="name" class="nes-input" pattern="[A-Za-zÀ-ž\s]{2,50}"
+              title="Unesite samo slova (2-50 karaktera)" placeholder="Vaše ime" required />
           </div>
+
           <div class="nes-field">
             <label for="email_field">Vaš Email</label>
             <input type="email" id="email_field" name="email" class="nes-input" placeholder="vas@email.com" required />
           </div>
+
           <div class="nes-field">
             <label for="textarea_field">Poruka</label>
-            <textarea id="textarea_field" name="message" class="nes-textarea"
+            <textarea id="textarea_field" name="message" class="nes-textarea" minlength="10" maxlength="500"
               placeholder="Pišite mi o Vašem projektu..." required></textarea>
           </div>
+
           <br />
           <button type="submit" class="nes-btn is-primary">Pošalji poruku</button>
         </form>

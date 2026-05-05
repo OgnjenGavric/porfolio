@@ -875,24 +875,32 @@
       <div class="nes-container with-title is-centered">
         <p class="title">Contact Me</p>
         <form action="https://formsubmit.co/ognjen.gavric@gmail.com" method="POST" id="contact-form">
-          <!-- FormSubmit Configuration -->
+
+          <!-- Honeypot (anti-spam) -->
+          <input type="text" name="_honey" style="display:none">
+
+          <!-- FormSubmit config -->
           <input type="hidden" name="_subject" value="New message from Portfolio (English)">
           <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="https://ognjen.starprofiles.eu/thank-you.html">
 
           <div class="nes-field">
             <label for="name_field">Your Name</label>
             <input type="text" id="name_field" name="name" class="nes-input" placeholder="Your name" required />
           </div>
+
           <div class="nes-field">
             <label for="email_field">Your Email</label>
             <input type="email" id="email_field" name="email" class="nes-input" placeholder="your@email.com" required />
           </div>
+
           <div class="nes-field">
             <label for="textarea_field">Message</label>
             <textarea id="textarea_field" name="message" class="nes-textarea"
               placeholder="Tell me about your project..." required></textarea>
           </div>
+
           <br />
           <button type="submit" class="nes-btn is-primary">Send Message</button>
         </form>
